@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B561AD8B-0354-4FF2-97C0-6FBD6ED61696}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libjpeg</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="codestream\aclosslessscan.cpp" />
+    <ClCompile Include="codestream\acrefinementscan.cpp" />
+    <ClCompile Include="codestream\acsequentialscan.cpp" />
+    <ClCompile Include="codestream\decoder.cpp" />
+    <ClCompile Include="codestream\encoder.cpp" />
+    <ClCompile Include="codestream\entropyparser.cpp" />
+    <ClCompile Include="codestream\hiddenrefinementscan.cpp" />
+    <ClCompile Include="codestream\image.cpp" />
+    <ClCompile Include="codestream\jpeglsscan.cpp" />
+    <ClCompile Include="codestream\lineinterleavedlsscan.cpp" />
+    <ClCompile Include="codestream\losslessscan.cpp" />
+    <ClCompile Include="codestream\predictivescan.cpp" />
+    <ClCompile Include="codestream\rectanglerequest.cpp" />
+    <ClCompile Include="codestream\refinementscan.cpp" />
+    <ClCompile Include="codestream\sampleinterleavedlsscan.cpp" />
+    <ClCompile Include="codestream\sequentialscan.cpp" />
+    <ClCompile Include="codestream\singlecomponentlsscan.cpp" />
+    <ClCompile Include="codestream\tables.cpp" />
+    <ClCompile Include="codestream\vesadctscan.cpp" />
+    <ClCompile Include="codestream\vesascan.cpp" />
+    <ClCompile Include="coding\actemplate.cpp" />
+    <ClCompile Include="coding\arithmetictemplate.cpp" />
+    <ClCompile Include="coding\arthdeco.cpp" />
+    <ClCompile Include="coding\blockrow.cpp" />
+    <ClCompile Include="coding\decodertemplate.cpp" />
+    <ClCompile Include="coding\huffmancoder.cpp" />
+    <ClCompile Include="coding\huffmandecoder.cpp" />
+    <ClCompile Include="coding\huffmanstatistics.cpp" />
+    <ClCompile Include="coding\huffmantemplate.cpp" />
+    <ClCompile Include="coding\qmcoder.cpp" />
+    <ClCompile Include="coding\quantizedrow.cpp" />
+    <ClCompile Include="colortrafo\colortrafo.cpp" />
+    <ClCompile Include="colortrafo\lslosslesstrafo.cpp" />
+    <ClCompile Include="colortrafo\rcttrafo.cpp" />
+    <ClCompile Include="colortrafo\trivialtrafo.cpp" />
+    <ClCompile Include="colortrafo\ycbcrtrafo.cpp" />
+    <ClCompile Include="control\bitmapctrl.cpp" />
+    <ClCompile Include="control\blockbitmaprequester.cpp" />
+    <ClCompile Include="control\blockbuffer.cpp" />
+    <ClCompile Include="control\blocklineadapter.cpp" />
+    <ClCompile Include="control\bufferctrl.cpp" />
+    <ClCompile Include="control\hierarchicalbitmaprequester.cpp" />
+    <ClCompile Include="control\lineadapter.cpp" />
+    <ClCompile Include="control\linebitmaprequester.cpp" />
+    <ClCompile Include="control\linebuffer.cpp" />
+    <ClCompile Include="control\linelineadapter.cpp" />
+    <ClCompile Include="control\linemerger.cpp" />
+    <ClCompile Include="control\residualblockhelper.cpp" />
+    <ClCompile Include="ctrafo\YCbCr444ToRGB.cpp" />
+    <ClCompile Include="dct\dct.cpp" />
+    <ClCompile Include="dct\hadamard.cpp" />
+    <ClCompile Include="dct\idct.cpp" />
+    <ClCompile Include="dct\sermsdct.cpp" />
+    <ClCompile Include="interface\bitmaphook.cpp" />
+    <ClCompile Include="interface\hooks.cpp" />
+    <ClCompile Include="interface\imagebitmap.cpp" />
+    <ClCompile Include="interface\jpeg.cpp" />
+    <ClCompile Include="interface\jpgtypes.cpp" />
+    <ClCompile Include="interface\parameters.cpp" />
+    <ClCompile Include="interface\tagitem.cpp" />
+    <ClCompile Include="interface\types.cpp" />
+    <ClCompile Include="io\bitstream.cpp" />
+    <ClCompile Include="io\bytestream.cpp" />
+    <ClCompile Include="io\iostream.cpp" />
+    <ClCompile Include="io\memorystream.cpp" />
+    <ClCompile Include="io\randomaccessstream.cpp" />
+    <ClCompile Include="io\staticstream.cpp" />
+    <ClCompile Include="marker\actable.cpp" />
+    <ClCompile Include="marker\adobemarker.cpp" />
+    <ClCompile Include="marker\component.cpp" />
+    <ClCompile Include="marker\exifmarker.cpp" />
+    <ClCompile Include="marker\frame.cpp" />
+    <ClCompile Include="marker\huffmantable.cpp" />
+    <ClCompile Include="marker\jfifmarker.cpp" />
+    <ClCompile Include="marker\losslessmarker.cpp" />
+    <ClCompile Include="marker\lscolortrafo.cpp" />
+    <ClCompile Include="marker\quantization.cpp" />
+    <ClCompile Include="marker\residualmarker.cpp" />
+    <ClCompile Include="marker\residualspecsmarker.cpp" />
+    <ClCompile Include="marker\restartintervalmarker.cpp" />
+    <ClCompile Include="marker\scan.cpp" />
+    <ClCompile Include="marker\scantypes.cpp" />
+    <ClCompile Include="marker\thresholds.cpp" />
+    <ClCompile Include="marker\tonemappingmarker.cpp" />
+    <ClCompile Include="std\assert.cpp" />
+    <ClCompile Include="std\ctype.cpp" />
+    <ClCompile Include="std\errno.cpp" />
+    <ClCompile Include="std\math.cpp" />
+    <ClCompile Include="std\setjmp.cpp" />
+    <ClCompile Include="std\stdarg.cpp" />
+    <ClCompile Include="std\stddef.cpp" />
+    <ClCompile Include="std\stdio.cpp" />
+    <ClCompile Include="std\stdlib.cpp" />
+    <ClCompile Include="std\string.cpp" />
+    <ClCompile Include="std\unistd.cpp" />
+    <ClCompile Include="tools\debug.cpp" />
+    <ClCompile Include="tools\environment.cpp" />
+    <ClCompile Include="tools\line.cpp" />
+    <ClCompile Include="tools\rectangle.cpp" />
+    <ClCompile Include="tools\traits.cpp" />
+    <ClCompile Include="upsampling\downsampler.cpp" />
+    <ClCompile Include="upsampling\downsamplerbase.cpp" />
+    <ClCompile Include="upsampling\upsampler.cpp" />
+    <ClCompile Include="upsampling\upsamplerbase.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
